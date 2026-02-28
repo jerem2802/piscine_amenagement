@@ -285,12 +285,12 @@ if (modal && modalClose) {
       const waText = encodeURIComponent(`Bonjour, je m'intéresse au modèle ${name} — pouvez-vous me donner plus d'informations ?`);
 
       modalContent.innerHTML = `
-        <h3 class="font-serif text-2xl font-semibold mb-5" style="color:#0D2444;">${name}</h3>
+        <h3 class="font-serif text-3xl font-semibold mb-6" style="color:#0D2444;">${name}</h3>
         <div class="rounded-2xl overflow-hidden mb-6" style="background:#F4F8FF;">
-          <img src="${imgSrc}" alt="${name}" class="w-full h-auto object-contain" style="max-height:58vh;" />
+          <img src="${imgSrc}" alt="${name}" class="w-full h-auto object-contain" style="max-height:calc(90vh - 220px);" />
         </div>
         <div class="flex flex-wrap gap-3">
-          <button class="btn-gold flex-1 min-w-[160px] py-3 rounded-xl text-sm font-semibold" id="modal-devis-btn">
+          <button class="btn-gold flex-1 min-w-[160px] py-4 rounded-xl font-semibold" id="modal-devis-btn">
             Demander un devis
           </button>
           <a href="https://wa.me/33641732853?text=${waText}" target="_blank" rel="noopener"
