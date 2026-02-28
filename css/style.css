@@ -1,5 +1,5 @@
 /* ================================================
-   Piscine & Aménagement Bordeaux Médoc
+   Piscines & Aménagement Bordeaux Médoc
    Charte graphique : Blanc + Bleu logo (#1E4F8C)
    ================================================ */
 
@@ -44,9 +44,21 @@ body {
   box-shadow: 0 4px 30px rgba(30, 79, 140, 0.12);
 }
 /* links become blue when nav turns white */
-#navbar.scrolled .nav-link  { color: var(--text-dark) !important; }
-#navbar.scrolled .nav-link:hover { color: var(--blue) !important; }
-#navbar.scrolled #menu-btn  { color: var(--text-dark); }
+#navbar.scrolled .nav-link        { color: var(--text-dark) !important; }
+#navbar.scrolled .nav-link:hover  { color: var(--blue) !important; }
+#navbar.scrolled #menu-btn        { color: var(--text-dark); }
+
+/* Brand name switches white → dark on scroll */
+.navbar-brand-name {
+  color: white;
+  transition: color 0.4s ease;
+}
+.navbar-brand-sub {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.4s ease;
+}
+#navbar.scrolled .navbar-brand-name { color: var(--text-dark) !important; }
+#navbar.scrolled .navbar-brand-sub  { color: var(--blue) !important; }
 
 .nav-link {
   position: relative;

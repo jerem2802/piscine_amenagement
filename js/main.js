@@ -1,5 +1,5 @@
 /* ================================================
-   Piscine & Aménagement Bordeaux Médoc
+   Piscines & Aménagement Bordeaux Médoc
    Main JavaScript
    ================================================ */
 

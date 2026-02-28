@@ -1,7 +1,7 @@
 <?php
 /**
  * contact.php — Traitement des formulaires
- * Piscine & Aménagement Bordeaux Médoc
+ * Piscines & Aménagement Bordeaux Médoc
  */
 
 header('Content-Type: application/json; charset=utf-8');
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 // Destination
 define('DEST_EMAIL', 'piscinesabm@gmail.com');
-define('DEST_NAME',  'Piscine & Aménagement Bordeaux Médoc');
+define('DEST_NAME',  'Piscines & Aménagement Bordeaux Médoc');
 
 // ---- Fonctions utilitaires ----
 
