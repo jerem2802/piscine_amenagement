@@ -190,6 +190,56 @@ body {
   box-shadow: 0 8px 25px rgba(30,79,140,0.3);
 }
 
+/* ---- Bouton "Voir tous nos modèles" ---- */
+.btn-voir-modeles {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background: transparent;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  animation: modeles-border-pulse 3.5s ease-in-out infinite;
+}
+
+/* Shimmer périodique */
+.btn-voir-modeles::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, rgba(30,79,140,0.12) 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: modeles-shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes modeles-shimmer {
+  0%, 60%  { transform: translateX(-120%); }
+  80%      { transform: translateX(120%); }
+  100%     { transform: translateX(120%); }
+}
+
+@keyframes modeles-border-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(30,79,140,0); }
+  50%      { box-shadow: 0 0 0 7px rgba(30,79,140,0.10); }
+}
+
+.btn-voir-modeles:hover {
+  background: var(--blue);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(30,79,140,0.35);
+  animation: none;
+}
+
+/* Flèche glisse au hover */
+.btn-voir-modeles .btn-arrow {
+  transition: transform 0.3s ease;
+}
+.btn-voir-modeles:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
 /* WhatsApp button */
 .btn-whatsapp {
   background: var(--wa-green);
