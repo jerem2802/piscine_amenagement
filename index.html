@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Piscine & Aménagement Bordeaux Médoc — Spécialiste pose piscine coque polyester en Gironde. Devis gratuit, pose en 3 à 5 jours." />
+    <title>Piscine &amp; Aménagement Bordeaux Médoc | Spécialiste Piscine Coque</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                DEFAULT: "#1E4F8C",
+                dark: "#0D2444",
+                mid: "#2B63AD",
+                light: "#4A85CB",
+                pale: "#E0EAFA",
+                xpale: "#F4F8FF",
+              },
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "Georgia", "serif"],
+              sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-sans antialiased">
+    <!-- ================================================================
+     NAVBAR
+================================================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-400 bg-transparent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-sm flex-shrink-0">
+              <img src="img/logo_pa.png" alt="Piscine & Aménagement Bordeaux Médoc" class="w-full h-full object-contain" />
+            </div>
+            <div class="leading-tight">
+              <span class="block text-white font-serif font-semibold text-base tracking-wide">Piscine &amp; Aménagement</span>
+              <span class="block text-xs font-light tracking-widest uppercase text-white/70">Bordeaux Médoc</span>
+            </div>
+          </a>
+
+          <!-- Desktop nav -->
+          <div class="hidden lg:flex items-center gap-7">
+            <a href="#accueil" class="nav-link text-white/80 hover:text-white text-sm font-medium" data-section="accueil">Accueil</a>
+            <a href="piscines.html" class="nav-link text-white/80 hover:text-white text-sm font-medium">Les Piscines Coque</a>
+            <a href="#realisations" class="nav-link text-white/80 hover:text-white text-sm font-medium" data-section="realisations">Réalisations</a>
+            <a href="#amenagements" class="nav-link text-white/80 hover:text-white text-sm font-medium" data-section="amenagements">Aménagements</a>
+            <a href="#apropos" class="nav-link text-white/80 hover:text-white text-sm font-medium" data-section="apropos">À Propos</a>
+            <a href="#contact" class="nav-link text-white/80 hover:text-white text-sm font-medium" data-section="contact">Contact</a>
+            <a href="#devis" class="btn-gold px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide ml-2">Devis Gratuit</a>
+          </div>
+
+          <!-- Mobile hamburger -->
+          <button id="menu-btn" class="lg:hidden p-2 text-white" aria-label="Menu">
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" style="background: rgba(13, 36, 68, 0.98)">
+        <div class="px-4 pb-6 space-y-4 pt-2">
+          <a href="#accueil" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Accueil</a>
+          <a href="piscines.html" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Les Piscines Coque</a>
+          <a href="#realisations" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Réalisations</a>
+          <a href="#amenagements" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Aménagements</a>
+          <a href="#apropos" class="block text-white/80 hover:text-white py-2 text-sm font-medium">À Propos</a>
+          <a href="#contact" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Contact</a>
+          <a href="#devis" class="btn-gold block text-center px-6 py-3 rounded-full text-sm font-semibold mt-4">Devis Gratuit</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================================================================
+     HERO — Contact point 1 (CTA + téléphone + WhatsApp)
+================================================================ -->
+    <section id="accueil" class="hero-section min-h-screen flex items-center relative">
+      <!-- Ripples -->
+      <div class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%)">
+        <div class="ripple"></div>
+        <div class="ripple"></div>
+        <div class="ripple"></div>
+      </div>
+
+      <!-- Vague décorative bas -->
+      <div class="absolute inset-0 flex items-end justify-center pointer-events-none opacity-10">
+        <svg viewBox="0 0 1440 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+          <path d="M0 150 Q180 50 360 150 Q540 250 720 150 Q900 50 1080 150 Q1260 250 1440 150" stroke="white" stroke-width="3" fill="none" />
+          <path d="M0 200 Q180 100 360 200 Q540 300 720 200 Q900 100 1080 200 Q1260 300 1440 200" stroke="white" stroke-width="2" fill="none" opacity="0.5" />
+        </svg>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
+        <div class="max-w-3xl">
+          <!-- Badge -->
+          <div class="hero-badge mb-6 w-fit reveal">
+            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+            Bordeaux Médoc — Gironde (33)
+          </div>
+
+          <!-- Titre -->
+          <h1 class="font-serif text-white leading-tight mb-6 reveal reveal-delay-1" style="font-size: clamp(2.4rem, 5.5vw, 4rem)">
+            Votre piscine coque<br />
+            <span class="text-gradient-blue">posée en 3 à 5 jours.</span>
+          </h1>
+
+          <!-- Sous-titre animé -->
+          <p class="text-white/60 text-lg mb-10 h-8 reveal reveal-delay-2 font-light"><span id="hero-subtitle"></span><span class="animate-pulse opacity-70">|</span></p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4 mb-10 reveal reveal-delay-3">
+            <a href="#devis" class="btn-gold px-8 py-4 rounded-full font-semibold text-base tracking-wide"> Demander un devis gratuit </a>
+            <a href="piscines.html" class="btn-outline-gold px-8 py-4 rounded-full font-medium text-base tracking-wide border-white/60 text-white hover:bg-white hover:text-brand" style="border: 2px solid rgba(255, 255, 255, 0.5); color: white"> Découvrir nos modèles </a>
+            <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20piscines%20coques." target="_blank" rel="noopener" class="btn-whatsapp px-6 py-4 rounded-full font-semibold text-sm">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <!-- Contacts rapides -->
+          <div class="flex flex-wrap gap-6 reveal reveal-delay-4">
+            <a href="tel:+33641732853" class="flex items-center gap-3 text-white/60 hover:text-white/90 transition-colors group">
+              <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-white/40 uppercase tracking-wide">Appelez-nous</div>
+                <div class="text-sm font-medium text-white/80">06 41 73 28 53</div>
+              </div>
+            </a>
+            <a href="mailto:piscinesabm@gmail.com" class="flex items-center gap-3 text-white/60 hover:text-white/90 transition-colors group">
+              <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-white/40 uppercase tracking-wide">Email</div>
+                <div class="text-sm font-medium text-white/80">piscinesabm@gmail.com</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave bas -->
+      <div class="wave-divider">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 80L1440 80L1440 40C1200 80 960 0 720 40C480 80 240 0 0 40L0 80Z" fill="#F4F8FF" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     STATS
+================================================================ -->
+    <section class="py-16" style="background: #f4f8ff">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="reveal">
+            <div class="stat-number" data-target="15" data-suffix="+">10+</div>
+            <p class="text-gray-500 text-sm mt-2 font-medium uppercase tracking-wide">Années d'expérience</p>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="stat-number" data-target="400" data-suffix="+">400+</div>
+            <p class="text-gray-500 text-sm mt-2 font-medium uppercase tracking-wide">Piscines installées</p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <div class="stat-number" data-target="98" data-suffix="%">98%</div>
+            <p class="text-gray-500 text-sm mt-2 font-medium uppercase tracking-wide">Clients satisfaits</p>
+          </div>
+          <div class="reveal reveal-delay-3">
+            <div class="stat-number" data-target="5" data-suffix=" j.">5 j.</div>
+            <p class="text-gray-500 text-sm mt-2 font-medium uppercase tracking-wide">Pose rapide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     À PROPOS
+================================================================ -->
+    <section id="apropos" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Image / illustration -->
+          <div class="reveal-left relative">
+            <div class="relative rounded-3xl overflow-hidden aspect-square max-w-lg about-img-placeholder">
+              <!-- Illustration piscine coque -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="300" height="200" viewBox="0 0 300 200" fill="none" style="opacity: 0.35">
+                  <rect x="30" y="50" width="240" height="120" rx="60" stroke="white" stroke-width="3" fill="none" />
+                  <path d="M50 110 Q90 85 150 110 Q210 135 250 110" stroke="white" stroke-width="2" fill="none" />
+                  <path d="M50 110 Q90 135 150 110 Q210 85 250 110" stroke="white" stroke-width="2" fill="none" opacity="0.6" />
+                  <circle cx="80" cy="50" r="6" fill="white" opacity="0.5" />
+                  <circle cx="220" cy="50" r="6" fill="white" opacity="0.5" />
+                  <rect x="78" y="20" width="4" height="32" fill="white" opacity="0.4" />
+                  <rect x="218" y="20" width="4" height="32" fill="white" opacity="0.4" />
+                </svg>
+              </div>
+              <!-- Card info bas-gauche -->
+              <div class="absolute bottom-8 left-8 bg-white rounded-2xl p-5 shadow-xl">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #1e4f8c, #2b63ad)">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-serif font-bold text-sm" style="color: #0d2444">Garantie décennale</div>
+                    <div class="text-gray-500 text-xs">Artisans certifiés</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Grille de points déco -->
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-15" style="background-image: radial-gradient(circle, #1e4f8c 1.5px, transparent 0); background-size: 12px 12px"></div>
+          </div>
+
+          <!-- Texte -->
+          <div class="reveal-right">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="gold-line"></span>
+              <span class="text-xs font-semibold uppercase tracking-widest" style="color: #1e4f8c">Qui sommes-nous</span>
+            </div>
+            <h2 class="font-serif text-4xl md:text-5xl leading-tight mb-6" style="color: #0d2444">Artisans du bien-être<br /><em>depuis 2009</em></h2>
+            <p class="text-gray-600 leading-relaxed mb-5">Basée au cœur du Médoc, notre entreprise familiale est spécialisée dans la pose de piscines coque polyester. Nous intervenons dans toute la Gironde, de Bordeaux jusqu'au littoral médocain.</p>
+            <p class="text-gray-600 leading-relaxed mb-8">Notre équipe accompagne chaque projet de A à Z : étude de terrain, démarches administratives, installation complète et suivi après mise en eau.</p>
+
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #1e4f8c" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700">Garantie décennale — piscine et installation</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #1e4f8c" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700">Entreprise locale, intervention dans toute la Gironde</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #1e4f8c" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700">Devis personnalisé offert, sans engagement</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #1e4f8c" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700">Réponse sous 24h, prise en charge rapide</span>
+              </div>
+            </div>
+
+            <a href="#devis" class="btn-gold inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold">
+              Obtenir mon devis
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     SERVICES
+================================================================ -->
+    <section id="amenagements" class="py-24 bg-pool-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-3 mb-4 reveal">
+            <span class="gold-line"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest" style="color: #1e4f8c">Nos expertises</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl leading-tight reveal reveal-delay-1" style="color: #0d2444">Des services complets<br />pour votre projet</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service 1 : Pose Piscine Coque -->
+          <div class="service-card bg-white rounded-2xl p-8 shadow-sm reveal">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, rgba(30, 79, 140, 0.12), rgba(43, 99, 173, 0.06))">
+              <svg class="w-8 h-8" style="color: #1e4f8c" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12C3 12 5 9 8 9C11 9 11 13 14 13C17 13 17 9 20 9M3 17C3 17 5 14 8 14C11 14 11 18 14 18C17 18 17 14 20 14" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-3" style="color: #0d2444">Pose de Piscine Coque</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">Notre cœur de métier. Installation complète de votre piscine coque polyester en 3 à 5 jours : terrassement, pose, raccordements hydrauliques et électriques, mise en eau. Clé en main.</p>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+              <a href="piscines.html" class="text-sm font-semibold flex items-center gap-1 hover:gap-3 transition-all" style="color: #1e4f8c">
+                Voir nos modèles
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 : Aménagement de Terrain -->
+          <div class="service-card bg-white rounded-2xl p-8 shadow-sm reveal reveal-delay-1">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, rgba(74, 133, 203, 0.15), rgba(74, 133, 203, 0.06))">
+              <svg class="w-8 h-8" style="color: #4a85cb" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-3" style="color: #0d2444">Aménagement de Terrain</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">Plages en pierre naturelle, carrelage, béton désactivé, bois composite, terrasses, clôtures, dalles… Nous préparons et aménageons l'environnement complet autour de votre piscine.</p>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+              <a href="#realisations" class="text-sm font-semibold flex items-center gap-1 hover:gap-3 transition-all" style="color: #1e4f8c">
+                Nos réalisations
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 : Entretien & SAV -->
+          <div class="service-card bg-white rounded-2xl p-8 shadow-sm reveal reveal-delay-2">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.06))">
+              <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-semibold mb-3" style="color: #0d2444">Entretien &amp; SAV</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">Contrats d'entretien saisonniers, traitement de l'eau, hivernage, réparations. Notre équipe reste à vos côtés toute l'année pour profiter de votre piscine en toute sérénité.</p>
+            <div class="mt-6 pt-6 border-t border-gray-100">
+              <a href="#contact" class="text-sm font-semibold flex items-center gap-1 hover:gap-3 transition-all" style="color: #1e4f8c">
+                En savoir plus
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     PISCINES — Teaser
+================================================================ -->
+    <section id="realisations" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-3 mb-4 reveal">
+            <span class="gold-line"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest" style="color: #1e4f8c">Nos modèles</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl leading-tight reveal reveal-delay-1" style="color: #0d2444">Piscines coque<br />polyester premium</h2>
+          <p class="text-gray-500 mt-4 max-w-xl mx-auto reveal reveal-delay-2">Découvrez notre gamme exclusive de coques fabriquées en France, disponibles en plusieurs dimensions et coloris.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card-pool rounded-2xl overflow-hidden shadow-md reveal">
+            <div class="pool-gradient-1 aspect-video relative flex items-center justify-center">
+              <svg width="140" height="80" viewBox="0 0 140 80" fill="none" style="opacity: 0.4">
+                <rect x="10" y="20" width="120" height="44" rx="8" stroke="white" stroke-width="2" fill="none" />
+                <path d="M20 42 Q50 28 70 42 Q90 56 120 42" stroke="white" stroke-width="1.5" fill="none" />
+              </svg>
+              <div class="absolute top-4 right-4 price-badge">Dès 18 900€</div>
+            </div>
+            <div class="p-6 bg-white">
+              <h3 class="font-serif text-xl font-semibold mb-1" style="color: #0d2444">La Méditerranée</h3>
+              <p class="text-gray-500 text-sm mb-4">8×4m — Rectangulaire classique</p>
+              <a href="piscines.html#mediterranee" class="btn-gold inline-block px-6 py-2.5 rounded-full text-sm font-semibold">Voir le modèle</a>
+            </div>
+          </div>
+
+          <div class="card-pool rounded-2xl overflow-hidden shadow-md reveal reveal-delay-1">
+            <div class="pool-gradient-3 aspect-video relative flex items-center justify-center">
+              <svg width="140" height="80" viewBox="0 0 140 80" fill="none" style="opacity: 0.4">
+                <rect x="10" y="20" width="120" height="44" rx="8" stroke="white" stroke-width="2" fill="none" />
+                <path d="M20 42 Q50 56 70 42 Q90 28 120 42" stroke="white" stroke-width="1.5" fill="none" />
+              </svg>
+              <div class="absolute top-4 right-4 price-badge">Dès 28 900€</div>
+              <div class="absolute top-4 left-4 bg-amber-400 text-blue-900 text-xs font-bold px-3 py-1 rounded-full">Bestseller</div>
+            </div>
+            <div class="p-6 bg-white">
+              <h3 class="font-serif text-xl font-semibold mb-1" style="color: #0d2444">Le Bordeaux</h3>
+              <p class="text-gray-500 text-sm mb-4">10×5m — Prestige Roman End</p>
+              <a href="piscines.html#bordeaux" class="btn-gold inline-block px-6 py-2.5 rounded-full text-sm font-semibold">Voir le modèle</a>
+            </div>
+          </div>
+
+          <div class="card-pool rounded-2xl overflow-hidden shadow-md reveal reveal-delay-2">
+            <div class="pool-gradient-4 aspect-video relative flex items-center justify-center">
+              <svg width="140" height="90" viewBox="0 0 140 90" fill="none" style="opacity: 0.4">
+                <path d="M20 70 Q15 40 35 25 Q55 10 70 20 Q90 30 110 25 Q125 20 125 45 Q125 70 100 78 Q70 88 40 78 Z" stroke="white" stroke-width="2" fill="none" />
+              </svg>
+              <div class="absolute top-4 right-4 price-badge">Dès 19 500€</div>
+            </div>
+            <div class="p-6 bg-white">
+              <h3 class="font-serif text-xl font-semibold mb-1" style="color: #0d2444">Le Lagon</h3>
+              <p class="text-gray-500 text-sm mb-4">Forme libre — Naturel &amp; organique</p>
+              <a href="piscines.html#lagon" class="btn-gold inline-block px-6 py-2.5 rounded-full text-sm font-semibold">Voir le modèle</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12 reveal">
+          <a href="piscines.html" class="btn-outline-gold inline-flex items-center gap-2 px-10 py-4 rounded-full font-semibold text-base">
+            Voir tous nos modèles (6 coques disponibles)
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     PROCESSUS
+================================================================ -->
+    <section class="py-24 bg-navy-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-3 mb-4 reveal">
+            <span style="display: inline-block; width: 60px; height: 3px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)); border-radius: 2px"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-white/60">Comment ça marche</span>
+            <span style="display: inline-block; width: 60px; height: 3px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)); border-radius: 2px"></span>
+          </div>
+          <h2 class="font-serif text-white text-4xl md:text-5xl reveal reveal-delay-1">Votre projet, étape par étape</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center reveal">
+            <div class="step-number mx-auto mb-6">1</div>
+            <h3 class="font-serif text-white text-lg mb-3">Visite &amp; Devis</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Nous venons chez vous pour évaluer votre terrain et vous proposer un devis détaillé <strong class="text-white/80">entièrement gratuit</strong>.</p>
+          </div>
+          <div class="text-center reveal reveal-delay-1">
+            <div class="step-number mx-auto mb-6">2</div>
+            <h3 class="font-serif text-white text-lg mb-3">Conception</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Choix du modèle, du coloris, des équipements. Nous gérons également les démarches administratives si nécessaire.</p>
+          </div>
+          <div class="text-center reveal reveal-delay-2">
+            <div class="step-number mx-auto mb-6">3</div>
+            <h3 class="font-serif text-white text-lg mb-3">Installation</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Terrassement, mise en place de la coque, raccordements. Livraison clé en main en <strong class="text-white/80">3 à 5 jours</strong>.</p>
+          </div>
+          <div class="text-center reveal reveal-delay-3">
+            <div class="step-number mx-auto mb-6">4</div>
+            <h3 class="font-serif text-white text-lg mb-3">Mise en eau</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Formation à l'utilisation, traitement initial, remise des garanties. Prêt à plonger dès le premier jour !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     TÉMOIGNAGES
+================================================================ -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-3 mb-4 reveal">
+            <span class="gold-line"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest" style="color: #1e4f8c">Témoignages</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl leading-tight reveal reveal-delay-1" style="color: #0d2444">Ils nous font confiance</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="testimonial-card rounded-2xl p-8 shadow-sm reveal">
+            <div class="stars flex gap-1 mb-4 text-xl">★★★★★</div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">"Équipe très professionnelle, délai tenu à la lettre. Notre piscine Le Bordeaux est magnifique. La pose en 4 jours chrono. Un grand merci !"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style="background: linear-gradient(135deg, #1e4f8c, #2b63ad)">MR</div>
+              <div>
+                <div class="font-semibold text-sm" style="color: #0d2444">Marie &amp; Rémi D.</div>
+                <div class="text-gray-400 text-xs">Lesparre-Médoc (33)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card rounded-2xl p-8 shadow-sm reveal reveal-delay-1">
+            <div class="stars flex gap-1 mb-4 text-xl">★★★★★</div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">"Devis clair, prix honnête, équipe sympa et sérieuse. La piscine L'Évasion est parfaite pour notre petite propriété. Je recommande sans hésitation."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style="background: linear-gradient(135deg, #2b63ad, #4a85cb)">PL</div>
+              <div>
+                <div class="font-semibold text-sm" style="color: #0d2444">Pierre L.</div>
+                <div class="text-gray-400 text-xs">Bordeaux — Caudéran (33)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card rounded-2xl p-8 shadow-sm reveal reveal-delay-2">
+            <div class="stars flex gap-1 mb-4 text-xl">★★★★★</div>
+            <p class="text-gray-600 italic leading-relaxed mb-6">"Service au top du début à la fin. Ils ont aussi aménagé la plage en béton désactivé et la terrasse bois composite. Notre jardin est méconnaissable. Parfait !"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style="background: linear-gradient(135deg, #10b981, #34d399)">SB</div>
+              <div>
+                <div class="font-semibold text-sm" style="color: #0d2444">Sophie &amp; Benoit M.</div>
+                <div class="text-gray-400 text-xs">Pauillac (33)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     CTA DEVIS — Contact point 2 (formulaire devis express + WhatsApp)
+================================================================ -->
+    <section id="devis" class="py-24 relative overflow-hidden bg-navy-pattern">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <!-- Colonne gauche -->
+          <div class="reveal-left">
+            <div class="flex items-center gap-3 mb-4">
+              <span style="display: inline-block; width: 60px; height: 3px; background: rgba(255, 255, 255, 0.4); border-radius: 2px"></span>
+              <span class="text-xs font-semibold uppercase tracking-widest text-white/60">Devis express</span>
+            </div>
+            <h2 class="font-serif text-white text-4xl md:text-5xl mb-6">Votre devis<br /><span style="color: rgba(255, 255, 255, 0.75)">offert en 48h</span></h2>
+            <p class="text-white/50 leading-relaxed mb-8">Remplissez le formulaire et nous vous rappelons sous 24h pour organiser une visite gratuite. Aucun engagement, aucun frais.</p>
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center gap-4 text-white/60">
+                <svg class="w-5 h-5 flex-shrink-0" style="color: #4a85cb" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                Visite à domicile sans frais
+              </div>
+              <div class="flex items-center gap-4 text-white/60">
+                <svg class="w-5 h-5 flex-shrink-0" style="color: #4a85cb" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                Devis détaillé et transparent
+              </div>
+              <div class="flex items-center gap-4 text-white/60">
+                <svg class="w-5 h-5 flex-shrink-0" style="color: #4a85cb" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                Sans engagement de votre part
+              </div>
+            </div>
+
+            <!-- WhatsApp alternatif -->
+            <div class="bg-white/10 rounded-2xl p-5 border border-white/15">
+              <p class="text-white/70 text-sm mb-3">Vous préférez nous contacter directement ?</p>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="tel:+33641732853" class="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white rounded-xl px-4 py-3 text-sm font-medium transition-all">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                  06 41 73 28 53
+                </a>
+                <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20une%20piscine%20coque." target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulaire devis express -->
+          <div class="reveal-right">
+            <div class="bg-white rounded-3xl p-8 shadow-2xl">
+              <h3 class="font-serif text-xl mb-6" style="color: #0d2444">Demande de devis rapide</h3>
+              <form id="form-devis" class="space-y-4">
+                <input type="hidden" name="_subject" value="Demande de devis — Piscine & Aménagement Bordeaux Médoc" />
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="form-label">Prénom *</label>
+                    <input type="text" name="prenom" class="form-input" placeholder="Jean" required />
+                  </div>
+                  <div>
+                    <label class="form-label">Nom *</label>
+                    <input type="text" name="nom" class="form-input" placeholder="Dupont" required />
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label">Téléphone *</label>
+                  <input type="tel" name="telephone" class="form-input" placeholder="06 00 00 00 00" required />
+                </div>
+                <div>
+                  <label class="form-label">Code postal</label>
+                  <input type="text" name="code_postal" class="form-input" placeholder="33000" />
+                </div>
+                <div>
+                  <label class="form-label">Modèle qui vous intéresse</label>
+                  <select name="modele" class="form-input">
+                    <option value="">-- Sélectionner --</option>
+                    <option>La Méditerranée (8×4m)</option>
+                    <option>L'Atlantique (9×4,5m)</option>
+                    <option>Le Bordeaux (10×5m)</option>
+                    <option>Le Lagon (forme libre)</option>
+                    <option>L'Évasion (6×3m)</option>
+                    <option>Le Prestige (12×6m)</option>
+                    <option>Je ne sais pas encore</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label">Votre message <span class="text-gray-400 font-normal">(optionnel)</span></label>
+                  <textarea name="message" class="form-input" id="msg-devis" rows="3" maxlength="500" placeholder="Décrivez votre terrain, vos souhaits, posez vos questions…"></textarea>
+                  <div class="char-counter" id="cnt-devis">0 / 500 caractères</div>
+                </div>
+                <button type="submit" class="btn-gold w-full py-4 rounded-xl font-semibold text-base">Envoyer ma demande de devis</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     CONTACT COMPLET — Contact point 3
+================================================================ -->
+    <section id="contact" class="py-24 bg-pool-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-3 mb-4 reveal">
+            <span class="gold-line"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest" style="color: #1e4f8c">Contactez-nous</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl leading-tight reveal reveal-delay-1" style="color: #0d2444">Parlons de votre projet</h2>
+          <p class="text-gray-500 mt-4 max-w-xl mx-auto reveal reveal-delay-2">Du lundi au samedi de 8h à 19h. Contactez-nous par le moyen qui vous convient, y compris par WhatsApp pour nous envoyer des photos de votre terrain.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- Infos contact -->
+          <div class="space-y-5 reveal-left">
+            <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #1e4f8c, #2b63ad)">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm mb-1" style="color: #0d2444">Téléphone</h4>
+                <a href="tel:+33641732853" class="text-gray-600 text-sm hover:text-blue-700 transition-colors">06 41 73 28 53</a>
+                <p class="text-gray-400 text-xs mt-1">Lun–Sam · 8h–19h</p>
+              </div>
+            </div>
+
+            <!-- WhatsApp card -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #25d366">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm mb-1" style="color: #0d2444">WhatsApp</h4>
+                <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20vous%20contacte%20pour%20un%20projet%20de%20piscine." target="_blank" rel="noopener" class="text-gray-600 text-sm hover:text-green-600 transition-colors">06 00 00 00 00</a>
+                <p class="text-gray-400 text-xs mt-1">Envoyez photos &amp; plans</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #1e4f8c, #2b63ad)">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm mb-1" style="color: #0d2444">Email</h4>
+                <a href="mailto:piscinesabm@gmail.com" class="text-gray-600 text-sm hover:text-blue-700 transition-colors">piscinesabm@gmail.com</a>
+                <p class="text-gray-400 text-xs mt-1">Réponse sous 24h</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #1e4f8c, #2b63ad)">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm mb-1" style="color: #0d2444">Adresse</h4>
+                <p class="text-gray-600 text-sm">19 rue des Aubépines<br />33180 Vertheuil</p>
+                <p class="text-gray-400 text-xs mt-1">Toute la Gironde</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulaire complet -->
+          <div class="lg:col-span-2 reveal-right">
+            <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm">
+              <h3 class="font-serif text-2xl mb-2" style="color: #0d2444">Envoyez-nous un message</h3>
+              <p class="text-gray-400 text-sm mb-8">Vous pouvez également nous envoyer des photos de votre terrain via WhatsApp au 06 00 00 00 00.</p>
+              <form id="form-contact" class="space-y-5">
+                <input type="hidden" name="_subject" value="Message client — Piscine & Aménagement Bordeaux Médoc" />
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="form-label">Prénom *</label>
+                    <input type="text" name="prenom" class="form-input" placeholder="Jean" required />
+                  </div>
+                  <div>
+                    <label class="form-label">Nom *</label>
+                    <input type="text" name="nom" class="form-input" placeholder="Dupont" required />
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="form-label">Email *</label>
+                    <input type="email" name="email" class="form-input" placeholder="jean.dupont@email.fr" required />
+                  </div>
+                  <div>
+                    <label class="form-label">Téléphone</label>
+                    <input type="tel" name="telephone" class="form-input" placeholder="06 00 00 00 00" />
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label">Objet *</label>
+                  <select name="objet" class="form-input" required>
+                    <option value="">-- Sélectionner un objet --</option>
+                    <option>Demande de devis piscine coque</option>
+                    <option>Renseignements sur un modèle</option>
+                    <option>Aménagement de terrain</option>
+                    <option>Entretien / SAV</option>
+                    <option>Autre demande</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="form-label">
+                    Message *
+                    <span class="text-gray-400 font-normal ml-1">— décrivez votre projet librement</span>
+                  </label>
+                  <textarea name="message" class="form-input" id="msg-contact" rows="6" maxlength="1000" required placeholder="Parlez-nous de votre terrain, de la taille souhaitée, de l'utilisation prévue, de vos questions… Vous pouvez également nous envoyer des photos via WhatsApp."></textarea>
+                  <div class="char-counter" id="cnt-contact">0 / 1000 caractères</div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <input type="checkbox" id="rgpd" class="mt-1" style="accent-color: #1e4f8c" required />
+                  <label for="rgpd" class="text-gray-500 text-sm leading-relaxed"> J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <a href="#" class="underline hover:text-blue-700">politique de confidentialité</a>. </label>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <button type="submit" class="btn-gold flex-1 py-4 rounded-xl font-semibold text-base flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    Envoyer
+                  </button>
+                  <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20vous%20contacte%20pour%20un%20projet%20de%20piscine%20et%20j%27aimerais%20vous%20envoyer%20des%20photos." target="_blank" rel="noopener" class="btn-whatsapp flex-1 py-4 rounded-xl font-semibold text-base flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                    Envoyer via WhatsApp
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     FOOTER
+================================================================ -->
+    <footer style="background: #0d2444" class="pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+          <!-- Brand -->
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-11 h-11 rounded-xl bg-white p-1.5 flex items-center justify-center flex-shrink-0">
+                <img src="img/logo_pa.png" alt="Logo" class="w-full h-full object-contain" />
+              </div>
+              <div>
+                <span class="block text-white font-serif font-semibold text-sm">Piscine &amp; Aménagement</span>
+                <span class="block text-xs font-light tracking-widest text-white/50">Bordeaux Médoc</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-5">Votre spécialiste en pose de piscines coque polyester et aménagements de terrain dans le Médoc depuis 2009.</p>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:border-blue-400 hover:text-blue-400 transition-all">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:border-blue-400 hover:text-blue-400 transition-all">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
+                  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                </svg>
+              </a>
+              <a href="https://wa.me/33641732853" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:border-green-400 hover:text-green-400 transition-all">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div>
+            <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Navigation</h4>
+            <ul class="space-y-3">
+              <li><a href="#accueil" class="footer-link">Accueil</a></li>
+              <li><a href="piscines.html" class="footer-link">Les Piscines Coque</a></li>
+              <li><a href="#realisations" class="footer-link">Nos Réalisations</a></li>
+              <li><a href="#amenagements" class="footer-link">Aménagements</a></li>
+              <li><a href="#apropos" class="footer-link">À Propos</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Nos Services</h4>
+            <ul class="space-y-3">
+              <li><span class="footer-link">Pose piscine coque polyester</span></li>
+              <li><span class="footer-link">Terrassement &amp; VRD</span></li>
+              <li><span class="footer-link">Aménagement de terrain</span></li>
+              <li><span class="footer-link">Plages &amp; terrasses</span></li>
+              <li><span class="footer-link">Entretien &amp; hivernage</span></li>
+              <li><span class="footer-link">Traitement de l'eau</span></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Contact</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                <span class="text-gray-400 text-sm">19 rue des Aubépines<br />33180 Vertheuil</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                <a href="tel:+33641732853" class="footer-link">06 41 73 28 53</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                <a href="https://wa.me/33641732853" target="_blank" rel="noopener" class="footer-link hover:text-green-400">06 41 73 28 53 (WhatsApp)</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a href="mailto:piscinesabm@gmail.com" class="footer-link">piscinesabm@gmail.com</a>
+              </li>
+            </ul>
+            <div class="mt-6">
+              <a href="#devis" class="btn-gold inline-block px-6 py-2.5 rounded-full text-sm font-semibold">Devis Gratuit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
+          <p class="text-gray-500 text-xs">© <span class="current-year"></span> Piscine &amp; Aménagement Bordeaux Médoc. Tous droits réservés.</p>
+          <div class="flex gap-6">
+            <a href="#" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">Mentions légales</a>
+            <a href="#" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">Politique de confidentialité</a>
+            <a href="#" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" role="alert" aria-live="polite"></div>
+
+    <!-- Bulle WhatsApp flottante -->
+    <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20piscines%20coques." target="_blank" rel="noopener" class="wa-bubble" title="Nous contacter sur WhatsApp" aria-label="WhatsApp">
+      <span class="wa-pulse"></span>
+      <svg class="w-7 h-7 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
