@@ -237,7 +237,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       e.preventDefault();
       const navHeight = navbar ? navbar.offsetHeight : 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+      const extraOffset = href === '#devis-form' ? 30 : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - navHeight - extraOffset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   });
@@ -291,7 +292,7 @@ if (modal && modalClose) {
         </div>
         <div class="flex flex-wrap gap-3">
           <button class="btn-gold flex-1 min-w-[160px] py-4 rounded-xl font-semibold" id="modal-devis-btn">
-            Demander un devis
+            Demander une estimation
           </button>
           <a href="https://wa.me/33641732853?text=${waText}" target="_blank" rel="noopener"
              class="btn-whatsapp flex-1 min-w-[160px] py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
@@ -301,11 +302,10 @@ if (modal && modalClose) {
         </div>
       `;
 
-      /* Bouton devis dans la modale → pré-sélectionne + scroll */
+      /* Bouton estimation dans la modale → redirige vers le formulaire index.html */
       document.getElementById('modal-devis-btn').addEventListener('click', () => {
-        selectModelInForm(name);
         closeModal();
-        scrollToForm();
+        window.location.href = 'index.html?model=' + encodeURIComponent(name) + '#devis-form';
       });
 
       modal.classList.remove('hidden');
@@ -318,11 +318,13 @@ if (modal && modalClose) {
     });
   });
 
-  /* Boutons "Devis" sur les cartes → pré-sélectionnent le modèle dans le formulaire */
+  /* Boutons "Estimation" sur les cartes → redirige vers le formulaire index.html avec modèle pré-sélectionné */
   document.querySelectorAll('.pool-card .devis-link').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
       const card = link.closest('.pool-card');
-      selectModelInForm(card.dataset.name);
+      const model = card.dataset.name || '';
+      window.location.href = 'index.html?model=' + encodeURIComponent(model) + '#devis-form';
     });
   });
 }
@@ -371,6 +373,25 @@ if (heroSubtitle) {
 
   setTimeout(typeText, 800);
 }
+
+/* ---- Pré-sélection modèle depuis URL (?model=Bréhat) ---- */
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const model  = params.get('model');
+  if (!model) return;
+
+  function applyModel() {
+    const select = document.querySelector('#form-devis select[name="modele"]');
+    if (select) select.value = model;
+  }
+
+  // Appliquer dès que le DOM est prêt
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyModel);
+  } else {
+    applyModel();
+  }
+})();
 
 /* ---- Year in footer ---- */
 document.querySelectorAll('.current-year').forEach(el => {
