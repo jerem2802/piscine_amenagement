@@ -319,9 +319,8 @@
       const card = document.createElement('div');
       card.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer reveal';
       card.style.aspectRatio = '4/3';
-      const fullId = photo.asset_folder ? `${photo.asset_folder}/${photo.public_id}` : photo.public_id;
       card.innerHTML = `
-        <img src="${cdnUrl(fullId, 800)}" alt="Réalisation Piscines &amp; Aménagement"
+        <img src="${cdnUrl(photo.public_id, 800)}" alt="Réalisation Piscines &amp; Aménagement"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -367,8 +366,7 @@
 
   function showPhoto() {
     const photo = photos[currentIndex];
-    const fullId = photo.asset_folder ? `${photo.asset_folder}/${photo.public_id}` : photo.public_id;
-    lbImg.src = cdnUrl(fullId, 1600);
+    lbImg.src = cdnUrl(photo.public_id, 1600);
     lbImg.alt = 'Réalisation Piscines & Aménagement';
     lbCaption.textContent = '';
     lbCounter.textContent = photos.length > 1 ? `${currentIndex + 1} / ${photos.length}` : '';
