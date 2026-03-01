@@ -279,23 +279,33 @@
 <script src="js/main.js"></script>
 <script>
   // ── Cloudinary ────────────────────────────────────────────────────
-  const CLOUD  = 'dkujetmxm';
-  const FOLDER = 'nos-r%C3%A9alisations';
+  const CLOUD = 'dkujetmxm';
+  const TAG   = 'realisations';   // tag à appliquer sur chaque photo dans Cloudinary
   const cdnUrl = (publicId, w) =>
     `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${w}/${publicId}`;
 
   let photos = [];
   let currentIndex = 0;
 
-  fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${FOLDER}.json`)
-    .then(r => r.json())
+  const listUrl = `https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json`;
+  console.log('[Cloudinary] Fetch →', listUrl);
+
+  fetch(listUrl)
+    .then(r => {
+      console.log('[Cloudinary] HTTP status:', r.status);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
     .then(data => {
+      console.log('[Cloudinary] Réponse:', data);
       photos = (data.resources || []).sort((a, b) =>
         (b.created_at || '').localeCompare(a.created_at || '')
       );
+      console.log('[Cloudinary] Photos trouvées:', photos.length);
       renderGallery();
     })
-    .catch(() => {
+    .catch(err => {
+      console.error('[Cloudinary] Erreur:', err);
       document.getElementById('gallery-empty').classList.remove('hidden');
     });
 

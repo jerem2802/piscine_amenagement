@@ -1,561 +1,701 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Découvrez notre gamme de piscines coque polyester — 6 modèles fabriqués en France. Piscines & Aménagement Bordeaux Médoc." />
-  <title>Les Piscines Coque | Piscines &amp; Aménagement Bordeaux Médoc</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Découvrez notre gamme de piscines coque polyester — 6 modèles fabriqués en France. Piscines & Aménagement Bordeaux Médoc." />
+    <title>Les Piscines Coque | Piscines &amp; Aménagement Bordeaux Médoc</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { DEFAULT: '#1E4F8C', dark: '#0D2444', mid: '#2B63AD', light: '#4A85CB', pale: '#E0EAFA', xpale: '#F4F8FF' },
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { DEFAULT: "#1E4F8C", dark: "#0D2444", mid: "#2B63AD", light: "#4A85CB", pale: "#E0EAFA", xpale: "#F4F8FF" },
+            },
+            fontFamily: {
+              serif: ["Playfair Display", "Georgia", "serif"],
+              sans: ["Inter", "Helvetica", "Arial", "sans-serif"],
+            },
           },
-          fontFamily: {
-            serif: ['Playfair Display', 'Georgia', 'serif'],
-            sans:  ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-</head>
+        },
+      };
+    </script>
+  </head>
 
-<body class="font-sans antialiased">
-
-<!-- ================================================================
+  <body class="font-sans antialiased">
+    <!-- ================================================================
      NAVBAR
 ================================================================ -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 scrolled">
-  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 scrolled">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+          <a href="index.html" class="flex items-center gap-1.5 sm:gap-3">
+            <div class="logo-navbar w-20 h-20 lg:w-32 lg:h-32 flex items-center justify-center flex-shrink-0">
+              <img src="img/logo_pa.png" alt="Piscines & Aménagement Bordeaux Médoc" class="w-full h-full object-contain" />
+            </div>
+            <div class="leading-tight">
+              <span class="navbar-brand-name block font-serif font-semibold text-sm sm:text-base tracking-wide">Piscines &amp; Aménagement</span>
+              <span class="navbar-brand-sub block text-xs font-light tracking-widest">Bordeaux Médoc</span>
+            </div>
+          </a>
 
-      <a href="index.html" class="flex items-center gap-1.5 sm:gap-3">
-        <div class="logo-navbar w-20 h-20 lg:w-32 lg:h-32 flex items-center justify-center flex-shrink-0">
-          <img src="img/logo_pa.png" alt="Piscines & Aménagement Bordeaux Médoc" class="w-full h-full object-contain" />
-        </div>
-        <div class="leading-tight">
-          <span class="navbar-brand-name block font-serif font-semibold text-sm sm:text-base tracking-wide">Piscines &amp; Aménagement</span>
-          <span class="navbar-brand-sub block text-xs font-light tracking-widest">Bordeaux Médoc</span>
-        </div>
-      </a>
+          <div class="hidden lg:flex items-center gap-7">
+            <a href="index.html#accueil" class="nav-link text-sm font-medium" style="color: #3a5580">Accueil</a>
+            <a href="piscines.html" class="nav-link active text-sm font-medium" style="color: #1e4f8c">Les Piscines Coque</a>
+            <a href="realisations.html" class="nav-link text-sm font-medium" style="color: #3a5580">Réalisations</a>
+            <a href="index.html#amenagements" class="nav-link text-sm font-medium" style="color: #3a5580">Aménagements</a>
+            <a href="index.html#apropos" class="nav-link text-sm font-medium" style="color: #3a5580">À Propos</a>
+            <a href="index.html#contact" class="nav-link text-sm font-medium" style="color: #3a5580">Contact</a>
+            <a href="index.html#devis-form" class="btn-gold px-6 py-2.5 rounded-full text-sm font-semibold ml-2">Estimation gratuite</a>
+          </div>
 
-      <div class="hidden lg:flex items-center gap-7">
-        <a href="index.html#accueil"      class="nav-link text-sm font-medium" style="color:#3A5580;">Accueil</a>
-        <a href="piscines.html"           class="nav-link active text-sm font-medium" style="color:#1E4F8C;">Les Piscines Coque</a>
-        <a href="realisations.html" class="nav-link text-sm font-medium" style="color:#3A5580;">Réalisations</a>
-        <a href="index.html#amenagements" class="nav-link text-sm font-medium" style="color:#3A5580;">Aménagements</a>
-        <a href="index.html#apropos"      class="nav-link text-sm font-medium" style="color:#3A5580;">À Propos</a>
-        <a href="index.html#contact"      class="nav-link text-sm font-medium" style="color:#3A5580;">Contact</a>
-        <a href="index.html#devis-form" class="btn-gold px-6 py-2.5 rounded-full text-sm font-semibold ml-2">Estimation gratuite</a>
+          <button id="menu-btn" class="lg:hidden p-2" style="color: #0d2444" aria-label="Menu">
+            <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <button id="menu-btn" class="lg:hidden p-2" style="color:#0D2444;" aria-label="Menu">
-        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+      <div id="mobile-menu" style="background: rgba(13, 36, 68, 0.98)">
+        <div class="px-4 pb-6 space-y-4 pt-2">
+          <a href="index.html" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Accueil</a>
+          <a href="piscines.html" class="block text-white py-2 text-sm font-medium">Les Piscines Coque</a>
+          <a href="realisations.html" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Réalisations</a>
+          <a href="index.html#amenagements" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Aménagements</a>
+          <a href="index.html#apropos" class="block text-white/80 hover:text-white py-2 text-sm font-medium">À Propos</a>
+          <a href="index.html#contact" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Contact</a>
+          <a href="index.html#devis-form" class="btn-gold block text-center px-6 py-3 rounded-full text-sm font-semibold mt-4">Estimation gratuite</a>
+        </div>
+      </div>
+    </nav>
 
-  <div id="mobile-menu" style="background:rgba(13,36,68,0.98);">
-    <div class="px-4 pb-6 space-y-4 pt-2">
-      <a href="index.html"              class="block text-white/80 hover:text-white py-2 text-sm font-medium">Accueil</a>
-      <a href="piscines.html"           class="block text-white py-2 text-sm font-medium">Les Piscines Coque</a>
-      <a href="realisations.html" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Réalisations</a>
-      <a href="index.html#amenagements" class="block text-white/80 hover:text-white py-2 text-sm font-medium">Aménagements</a>
-      <a href="index.html#apropos"      class="block text-white/80 hover:text-white py-2 text-sm font-medium">À Propos</a>
-      <a href="index.html#contact"      class="block text-white/80 hover:text-white py-2 text-sm font-medium">Contact</a>
-      <a href="index.html#devis-form" class="btn-gold block text-center px-6 py-3 rounded-full text-sm font-semibold mt-4">Estimation gratuite</a>
-    </div>
-  </div>
-</nav>
-
-
-<!-- ================================================================
+    <!-- ================================================================
      PAGE HERO
 ================================================================ -->
-<section class="hero-section pt-36 pb-24 relative">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 50%,rgba(74,133,203,0.12) 0%,transparent 60%);"></div>
+    <section class="hero-section pt-36 pb-24 relative">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 30% 50%, rgba(74, 133, 203, 0.12) 0%, transparent 60%)"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-    <div class="hero-badge mb-6 w-fit mx-auto reveal">
-      <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-      12 modèles · Fabriqué en France
-    </div>
-    <h1 class="font-serif text-white leading-tight mb-6 reveal reveal-delay-1" style="font-size:clamp(2.2rem,5vw,3.5rem);">
-      Nos Piscines Coque<br/><span class="text-gradient-blue">Polyester Premium</span>
-    </h1>
-    <p class="text-white/60 text-lg max-w-2xl mx-auto mb-10 reveal reveal-delay-2 font-light">
-      Coques fabriquées en gelcoat haute résistance, livrées avec filtration, pompe et buses de refoulement. Posées en 3 à 5 jours.
-    </p>
-    <div class="flex flex-wrap justify-center gap-5 mb-6 reveal reveal-delay-3">
-      <a href="index.html#devis-form" class="btn-gold px-8 py-4 rounded-full font-semibold text-base">Demander une estimation</a>
-      <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20piscines%20coques." target="_blank" rel="noopener" class="btn-whatsapp px-8 py-4 rounded-full font-semibold text-base flex items-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Contacter sur WhatsApp
-      </a>
-    </div>
-    <div class="flex flex-wrap justify-center gap-6 text-white/50 text-sm reveal reveal-delay-4">
-      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Garantie 10 ans structure</span>
-      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Pose 3 à 5 jours</span>
-      <span class="flex items-center gap-2"><svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Estimation gratuite</span>
-    </div>
-  </div>
-
-  <div class="wave-divider">
-    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 60L1440 60L1440 30C1200 60 960 0 720 30C480 60 240 0 0 30L0 60Z" fill="#F4F8FF"/>
-    </svg>
-  </div>
-</section>
-
-
-<!-- ================================================================
-     CATALOGUE
-================================================================ -->
-<section id="catalogue" class="py-24 bg-pool-pattern">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- Vue d'ensemble des modèles -->
-    <div class="text-center mb-12 reveal">
-      <h2 class="font-serif font-semibold mb-3" style="font-size:clamp(1.7rem,3.5vw,2.5rem);color:#0D2444;">
-        Notre Gamme Complète
-      </h2>
-      <p class="text-gray-500 max-w-xl mx-auto text-base font-light">
-        12 modèles de coques polyester fabriquées en France, pour tous les jardins et tous les budgets.
-      </p>
-    </div>
-
-    <div id="nos-modeles" class="mb-16 reveal reveal-delay-1">
-      <div class="rounded-3xl overflow-hidden shadow-lg border border-brand-pale" style="background:#F4F8FF;">
-        <img
-          src="img/modeles/modèles.png"
-          alt="Vue d'ensemble de nos modèles de piscines coque"
-          class="w-full h-auto object-contain"
-          style="max-height:600px; object-position:center;"
-        />
-        <div class="px-6 py-4 flex justify-end" style="background:#EAF1FA;">
-          <a href="index.html#devis-form" class="btn-gold px-6 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap">
-            Demander une estimation
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+        <div class="hero-badge mb-6 w-fit mx-auto reveal">
+          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+          12 modèles · Fabriqué en France
+        </div>
+        <h1 class="font-serif text-white leading-tight mb-6 reveal reveal-delay-1" style="font-size: clamp(2.2rem, 5vw, 3.5rem)">Nos Piscines Coque<br /><span class="text-gradient-blue">Polyester Premium</span></h1>
+        <p class="text-white/60 text-lg max-w-2xl mx-auto mb-10 reveal reveal-delay-2 font-light">Coques fabriquées en gelcoat haute résistance, livrées avec filtration, pompe et buses de refoulement. Posées en 3 à 5 jours.</p>
+        <div class="flex flex-wrap justify-center gap-5 mb-6 reveal reveal-delay-3">
+          <a href="index.html#devis-form" class="btn-gold px-8 py-4 rounded-full font-semibold text-base">Demander une estimation</a>
+          <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20piscines%20coques." target="_blank" rel="noopener" class="btn-whatsapp px-8 py-4 rounded-full font-semibold text-base flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+            Contacter sur WhatsApp
           </a>
         </div>
-      </div>
-    </div>
-
-    <!-- Titre avant les fiches individuelles -->
-    <div class="text-center mb-10 reveal">
-      <h3 class="font-serif font-semibold text-2xl mb-2" style="color:#0D2444;">Les Modèles en Détail</h3>
-      <p class="text-gray-400 text-sm">Cliquez sur un modèle pour découvrir ses spécifications complètes</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Aix -->
-      <div id="aix" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal"
-           data-name="Aix" data-color="pool-gradient-1"
-           data-desc="Piscine coque polyester Aix — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-1 relative" style="height:240px;">
-          <img src="img/modeles/aix.png" alt="Aix" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="flex flex-wrap justify-center gap-6 text-white/50 text-sm reveal reveal-delay-4">
+          <span class="flex items-center gap-2"
+            ><svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Garantie 10 ans structure</span
+          >
+          <span class="flex items-center gap-2"
+            ><svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Pose 3 à 5 jours</span
+          >
+          <span class="flex items-center gap-2"
+            ><svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Estimation gratuite</span
+          >
         </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Aix</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
+      </div>
+
+      <div class="wave-divider">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 60L1440 60L1440 30C1200 60 960 0 720 30C480 60 240 0 0 30L0 60Z" fill="#F4F8FF" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ================================================================
+     CATALOGUE
+================================================================ -->
+    <section id="catalogue" class="py-24 bg-pool-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Vue d'ensemble des modèles -->
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-serif font-semibold mb-3" style="font-size: clamp(1.7rem, 3.5vw, 2.5rem); color: #0d2444">Notre Gamme Complète</h2>
+          <p class="text-gray-500 max-w-xl mx-auto text-base font-light">12 modèles de coques polyester fabriquées en France, pour tous les jardins et tous les budgets.</p>
+        </div>
+
+        <div id="nos-modeles" class="mb-16 reveal reveal-delay-1">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-brand-pale" style="background: #f4f8ff">
+            <img src="img/modeles/modèles.png" alt="Vue d'ensemble de nos modèles de piscines coque" class="w-full h-auto object-contain" style="max-height: 600px; object-position: center" />
+            <div class="px-6 py-4 flex justify-end" style="background: #eaf1fa">
+              <a href="index.html#devis-form" class="btn-gold px-6 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap"> Demander une estimation </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Titre avant les fiches individuelles -->
+        <div class="text-center mb-10 reveal">
+          <h3 class="font-serif font-semibold text-2xl mb-2" style="color: #0d2444">Les Modèles en Détail</h3>
+          <p class="text-gray-400 text-sm">Cliquez sur un modèle pour découvrir ses spécifications complètes</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Aix -->
+          <div id="aix" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal" data-name="Aix" data-color="pool-gradient-1" data-desc="Piscine coque polyester Aix — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-1 relative" style="height: 240px">
+              <img src="img/modeles/aix.png" alt="Aix" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Aix</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Batz -->
+          <div id="batz" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1" data-name="Batz" data-color="pool-gradient-2" data-desc="Piscine coque polyester Batz — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-2 relative" style="height: 240px">
+              <img src="img/modeles/batz.png" alt="Batz" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Batz</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Belle-Île -->
+          <div id="belleile" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2" data-name="Belle-Île" data-color="pool-gradient-3" data-desc="Piscine coque polyester Belle-Île — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-3 relative" style="height: 240px">
+              <img src="img/modeles/belleile.png" alt="Belle-Île" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Belle-Île</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Bréhat -->
+          <div id="brehat" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal" data-name="Bréhat" data-color="pool-gradient-4" data-desc="Piscine coque polyester Bréhat — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-4 relative" style="height: 240px">
+              <img src="img/modeles/bréhat.png" alt="Bréhat" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Bréhat</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Hoédic -->
+          <div id="hoedic" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1" data-name="Hoédic" data-color="pool-gradient-5" data-desc="Piscine coque polyester Hoédic — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-5 relative" style="height: 240px">
+              <img src="img/modeles/hoédic.png" alt="Hoédic" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Hoédic</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Molène -->
+          <div id="molene" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2" data-name="Molène" data-color="pool-gradient-6" data-desc="Piscine coque polyester Molène — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-6 relative" style="height: 240px">
+              <img src="img/modeles/molène.png" alt="Molène" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Molène</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Noirmoutier -->
+          <div id="noirmoutier" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal" data-name="Noirmoutier" data-color="pool-gradient-1" data-desc="Piscine coque polyester Noirmoutier — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-1 relative" style="height: 240px">
+              <img src="img/modeles/noirmoutier.png" alt="Noirmoutier" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Noirmoutier</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Oléron -->
+          <div id="oleron" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1" data-name="Oléron" data-color="pool-gradient-2" data-desc="Piscine coque polyester Oléron — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-2 relative" style="height: 240px">
+              <img src="img/modeles/oléron.png" alt="Oléron" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Oléron</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Ouessant -->
+          <div id="ouessant" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2" data-name="Ouessant" data-color="pool-gradient-3" data-desc="Piscine coque polyester Ouessant — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-3 relative" style="height: 240px">
+              <img src="img/modeles/ouessant.png" alt="Ouessant" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Ouessant</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Quiberon -->
+          <div id="quiberon" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal" data-name="Quiberon" data-color="pool-gradient-4" data-desc="Piscine coque polyester Quiberon — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-4 relative" style="height: 240px">
+              <img src="img/modeles/quiberon.png" alt="Quiberon" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Quiberon</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Ré -->
+          <div id="re" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1" data-name="Ré" data-color="pool-gradient-5" data-desc="Piscine coque polyester Ré — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-5 relative" style="height: 240px">
+              <img src="img/modeles/ré.png" alt="Ré" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Ré</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Yeu -->
+          <div id="yeu" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2" data-name="Yeu" data-color="pool-gradient-6" data-desc="Piscine coque polyester Yeu — contactez-nous pour les dimensions, options et tarifs.">
+            <div class="pool-gradient-6 relative" style="height: 240px">
+              <img src="img/modeles/yeu.png" alt="Yeu" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-serif text-xl font-semibold mb-4" style="color: #0d2444">Yeu</h3>
+              <div class="flex gap-3">
+                <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
+                <a
+                  href="index.html#devis-form"
+                  class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all"
+                  style="border-color: #1e4f8c; color: #1e4f8c"
+                  onmouseover="
+                    this.style.background = '#1E4F8C';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#1E4F8C';
+                  "
+                  >Estimation</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Batz -->
-      <div id="batz" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1"
-           data-name="Batz" data-color="pool-gradient-2"
-           data-desc="Piscine coque polyester Batz — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-2 relative" style="height:240px;">
-          <img src="img/modeles/batz.png" alt="Batz" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Batz</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Belle-Île -->
-      <div id="belleile" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2"
-           data-name="Belle-Île" data-color="pool-gradient-3"
-           data-desc="Piscine coque polyester Belle-Île — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-3 relative" style="height:240px;">
-          <img src="img/modeles/belleile.png" alt="Belle-Île" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Belle-Île</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bréhat -->
-      <div id="brehat" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal"
-           data-name="Bréhat" data-color="pool-gradient-4"
-           data-desc="Piscine coque polyester Bréhat — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-4 relative" style="height:240px;">
-          <img src="img/modeles/bréhat.png" alt="Bréhat" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Bréhat</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hoédic -->
-      <div id="hoedic" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1"
-           data-name="Hoédic" data-color="pool-gradient-5"
-           data-desc="Piscine coque polyester Hoédic — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-5 relative" style="height:240px;">
-          <img src="img/modeles/hoédic.png" alt="Hoédic" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Hoédic</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Molène -->
-      <div id="molene" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2"
-           data-name="Molène" data-color="pool-gradient-6"
-           data-desc="Piscine coque polyester Molène — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-6 relative" style="height:240px;">
-          <img src="img/modeles/molène.png" alt="Molène" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Molène</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Noirmoutier -->
-      <div id="noirmoutier" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal"
-           data-name="Noirmoutier" data-color="pool-gradient-1"
-           data-desc="Piscine coque polyester Noirmoutier — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-1 relative" style="height:240px;">
-          <img src="img/modeles/noirmoutier.png" alt="Noirmoutier" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Noirmoutier</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Oléron -->
-      <div id="oleron" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1"
-           data-name="Oléron" data-color="pool-gradient-2"
-           data-desc="Piscine coque polyester Oléron — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-2 relative" style="height:240px;">
-          <img src="img/modeles/oléron.png" alt="Oléron" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Oléron</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ouessant -->
-      <div id="ouessant" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2"
-           data-name="Ouessant" data-color="pool-gradient-3"
-           data-desc="Piscine coque polyester Ouessant — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-3 relative" style="height:240px;">
-          <img src="img/modeles/ouessant.png" alt="Ouessant" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Ouessant</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quiberon -->
-      <div id="quiberon" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal"
-           data-name="Quiberon" data-color="pool-gradient-4"
-           data-desc="Piscine coque polyester Quiberon — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-4 relative" style="height:240px;">
-          <img src="img/modeles/quiberon.png" alt="Quiberon" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Quiberon</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ré -->
-      <div id="re" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-1"
-           data-name="Ré" data-color="pool-gradient-5"
-           data-desc="Piscine coque polyester Ré — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-5 relative" style="height:240px;">
-          <img src="img/modeles/ré.png" alt="Ré" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Ré</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Yeu -->
-      <div id="yeu" class="pool-card bg-white rounded-3xl overflow-hidden shadow-sm reveal reveal-delay-2"
-           data-name="Yeu" data-color="pool-gradient-6"
-           data-desc="Piscine coque polyester Yeu — contactez-nous pour les dimensions, options et tarifs.">
-        <div class="pool-gradient-6 relative" style="height:240px;">
-          <img src="img/modeles/yeu.png" alt="Yeu" class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <div class="p-5">
-          <h3 class="font-serif text-xl font-semibold mb-4" style="color:#0D2444;">Yeu</h3>
-          <div class="flex gap-3">
-            <button class="btn-voir-details btn-gold flex-1 py-2.5 rounded-xl text-sm font-semibold">Voir les détails</button>
-            <a href="index.html#devis-form" class="devis-link flex-1 py-2.5 rounded-xl text-sm font-semibold text-center border-2 transition-all" style="border-color:#1E4F8C;color:#1E4F8C;" onmouseover="this.style.background='#1E4F8C';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#1E4F8C'">Estimation</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================================================================
+    <!-- ================================================================
      INCLUS DE SÉRIE
 ================================================================ -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <div class="flex items-center justify-center gap-3 mb-4 reveal">
-        <span class="gold-line"></span>
-        <span class="text-xs font-semibold uppercase tracking-widest" style="color:#1E4F8C;">Inclus de série</span>
-        <span class="gold-line"></span>
-      </div>
-      <h2 class="font-serif text-3xl md:text-4xl reveal reveal-delay-1" style="color:#0D2444;">Ce qui est inclus dans chaque piscine coque</h2>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="rounded-2xl p-6 text-center reveal" style="background:linear-gradient(rgba(244,248,255,0.92),rgba(244,248,255,0.92)),url('img/photos/filtration.png') center/cover no-repeat;">
-        <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,rgba(30,79,140,0.12),rgba(43,99,173,0.06));">
-          <svg class="w-7 h-7" style="color:#1E4F8C;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <!-- Cuve filtre à sable (forme ovale/baril) -->
-            <ellipse cx="12" cy="13" rx="5" ry="7" stroke-width="1.5"/>
-            <!-- Couches de sable filtrant -->
-            <path stroke-linecap="round" stroke-width="1.2" d="M9 10.5h6M9 13h6M9 15.5h6"/>
-            <!-- Tuyau valve multivoie (haut) -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M12 6V3"/>
-            <!-- Tête de valve (T) -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M10 3h4"/>
-            <!-- Tuyau entrée (gauche) -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M2 13h5"/>
-            <!-- Tuyau sortie (droite) -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M17 13h5"/>
-            <!-- Flèche flux entrant → -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 11l2 2-2 2"/>
-            <!-- Flèche flux sortant → -->
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 11l2 2-2 2"/>
-          </svg>
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <div class="flex items-center justify-center gap-3 mb-4 reveal">
+            <span class="gold-line"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest" style="color: #1e4f8c">Inclus de série</span>
+            <span class="gold-line"></span>
+          </div>
+          <h2 class="font-serif text-3xl md:text-4xl reveal reveal-delay-1" style="color: #0d2444">Ce qui est inclus dans chaque piscine coque</h2>
         </div>
-        <h4 class="font-semibold mb-2" style="color:#0D2444;">Filtration complète</h4>
-        <p class="text-gray-500 text-sm">Pompe de filtration, filtre à sable et coffret électrique fournis et posés — bassin opérationnel dès la mise en eau.</p>
-      </div>
-      <div class="rounded-2xl p-6 text-center reveal reveal-delay-1" style="background:linear-gradient(rgba(244,248,255,0.92),rgba(244,248,255,0.92)),url('img/photos/projecteur.png') center/cover no-repeat;">
-        <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(74,133,203,0.08));">
-          <svg class="w-7 h-7" style="color:#7C3AED;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <!-- Spot LED : ampoule/projecteur immergé -->
-            <circle cx="12" cy="11" r="4" stroke-width="1.5"/>
-            <!-- Rayon haut -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M12 3v2"/>
-            <!-- Rayon bas -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M12 17v2"/>
-            <!-- Rayon gauche -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M4 11h2"/>
-            <!-- Rayon droite -->
-            <path stroke-linecap="round" stroke-width="1.5" d="M18 11h2"/>
-            <!-- Diagonales -->
-            <path stroke-linecap="round" stroke-width="1.2" d="M6.34 6.34l1.42 1.42"/>
-            <path stroke-linecap="round" stroke-width="1.2" d="M16.24 16.24l1.42 1.42"/>
-            <path stroke-linecap="round" stroke-width="1.2" d="M17.66 6.34l-1.42 1.42"/>
-            <path stroke-linecap="round" stroke-width="1.2" d="M7.76 16.24l-1.42 1.42"/>
-            <!-- Point central lumineux (filament LED) -->
-            <circle cx="12" cy="11" r="1.5" fill="currentColor" stroke="none"/>
-          </svg>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="rounded-2xl p-6 text-center reveal"
+            style="
+              background:
+                linear-gradient(rgba(244, 248, 255, 0.92), rgba(244, 248, 255, 0.92)),
+                url(&quot;img/photos/filtration.png&quot;) center/cover no-repeat;
+            "
+          >
+            <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, rgba(30, 79, 140, 0.12), rgba(43, 99, 173, 0.06))">
+              <svg class="w-7 h-7" style="color: #1e4f8c" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Cuve filtre à sable (forme ovale/baril) -->
+                <ellipse cx="12" cy="13" rx="5" ry="7" stroke-width="1.5" />
+                <!-- Couches de sable filtrant -->
+                <path stroke-linecap="round" stroke-width="1.2" d="M9 10.5h6M9 13h6M9 15.5h6" />
+                <!-- Tuyau valve multivoie (haut) -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M12 6V3" />
+                <!-- Tête de valve (T) -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M10 3h4" />
+                <!-- Tuyau entrée (gauche) -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M2 13h5" />
+                <!-- Tuyau sortie (droite) -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M17 13h5" />
+                <!-- Flèche flux entrant → -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 11l2 2-2 2" />
+                <!-- Flèche flux sortant → -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 11l2 2-2 2" />
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2" style="color: #0d2444">Filtration complète</h4>
+            <p class="text-gray-500 text-sm">Pompe de filtration, filtre à sable et coffret électrique fournis et posés — bassin opérationnel dès la mise en eau.</p>
+          </div>
+          <div
+            class="rounded-2xl p-6 text-center reveal reveal-delay-1"
+            style="
+              background:
+                linear-gradient(rgba(244, 248, 255, 0.92), rgba(244, 248, 255, 0.92)),
+                url(&quot;img/photos/projecteur.png&quot;) center/cover no-repeat;
+            "
+          >
+            <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(74, 133, 203, 0.08))">
+              <svg class="w-7 h-7" style="color: #7c3aed" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- Spot LED : ampoule/projecteur immergé -->
+                <circle cx="12" cy="11" r="4" stroke-width="1.5" />
+                <!-- Rayon haut -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M12 3v2" />
+                <!-- Rayon bas -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M12 17v2" />
+                <!-- Rayon gauche -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M4 11h2" />
+                <!-- Rayon droite -->
+                <path stroke-linecap="round" stroke-width="1.5" d="M18 11h2" />
+                <!-- Diagonales -->
+                <path stroke-linecap="round" stroke-width="1.2" d="M6.34 6.34l1.42 1.42" />
+                <path stroke-linecap="round" stroke-width="1.2" d="M16.24 16.24l1.42 1.42" />
+                <path stroke-linecap="round" stroke-width="1.2" d="M17.66 6.34l-1.42 1.42" />
+                <path stroke-linecap="round" stroke-width="1.2" d="M7.76 16.24l-1.42 1.42" />
+                <!-- Point central lumineux (filament LED) -->
+                <circle cx="12" cy="11" r="1.5" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <h4 class="font-semibold mb-2" style="color: #0d2444">Éclairage LED couleur</h4>
+            <p class="text-gray-500 text-sm">Spots immergés à changement de couleur — blanc pur, bleu nuit ou teintes festives. Créez l'ambiance de votre piscine selon vos envies.</p>
+          </div>
+          <div
+            class="rounded-2xl p-6 text-center reveal reveal-delay-2"
+            style="
+              background:
+                linear-gradient(rgba(244, 248, 255, 0.92), rgba(244, 248, 255, 0.92)),
+                url(&quot;img/photos/garantie.png&quot;) center/cover no-repeat;
+            "
+          >
+            <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.06))">
+              <svg class="w-7 h-7 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            </div>
+            <h4 class="font-semibold mb-2" style="color: #0d2444">Garanties complètes</h4>
+            <p class="text-gray-500 text-sm">Structure étanche garantie 10 ans — coque polyester inaltérable, sans risque de fissure ni d'infiltration. Équipements garantis 2 ans, pose couverte par la garantie décennale de l'installateur.</p>
+          </div>
+          <div
+            class="rounded-2xl p-6 text-center reveal reveal-delay-3"
+            style="
+              background:
+                linear-gradient(rgba(244, 248, 255, 0.92), rgba(244, 248, 255, 0.92)),
+                url(&quot;img/photos/sav.png&quot;) center/cover no-repeat;
+            "
+          >
+            <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.06))">
+              <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+            </div>
+            <h4 class="font-semibold mb-2" style="color: #0d2444">SAV réactif</h4>
+            <p class="text-gray-500 text-sm">Équipe disponible 6j/7 pour toute question ou intervention</p>
+          </div>
         </div>
-        <h4 class="font-semibold mb-2" style="color:#0D2444;">Éclairage LED couleur</h4>
-        <p class="text-gray-500 text-sm">Spots immergés à changement de couleur — blanc pur, bleu nuit ou teintes festives. Créez l'ambiance de votre piscine selon vos envies, de jour comme de nuit.</p>
       </div>
-      <div class="rounded-2xl p-6 text-center reveal reveal-delay-2" style="background:linear-gradient(rgba(244,248,255,0.92),rgba(244,248,255,0.92)),url('img/photos/garantie.png') center/cover no-repeat;">
-        <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,rgba(16,185,129,0.12),rgba(16,185,129,0.06));">
-          <svg class="w-7 h-7 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <h4 class="font-semibold mb-2" style="color:#0D2444;">Garanties complètes</h4>
-        <p class="text-gray-500 text-sm">Structure étanche garantie 10 ans — coque polyester inaltérable, sans risque de fissure ni d'infiltration. Équipements garantis 2 ans, pose couverte par la garantie décennale de l'installateur.</p>
-      </div>
-      <div class="rounded-2xl p-6 text-center reveal reveal-delay-3" style="background:linear-gradient(rgba(244,248,255,0.92),rgba(244,248,255,0.92)),url('img/photos/sav.png') center/cover no-repeat;">
-        <div class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,rgba(139,92,246,0.12),rgba(139,92,246,0.06));">
-          <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-        </div>
-        <h4 class="font-semibold mb-2" style="color:#0D2444;">SAV réactif</h4>
-        <p class="text-gray-500 text-sm">Équipe disponible 6j/7 pour toute question ou intervention</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-
-
-<!-- ================================================================
+    <!-- ================================================================
      FOOTER
 ================================================================ -->
-<footer style="background:#0D2444;" class="pt-14 pb-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
-      <div class="md:col-span-1">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-14 h-14 flex items-center justify-center flex-shrink-0">
-            <img src="img/logo_pa.png" alt="Logo" class="w-full h-full object-contain" />
+    <footer style="background: #0d2444" class="pt-14 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+          <div class="md:col-span-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-14 h-14 flex items-center justify-center flex-shrink-0">
+                <img src="img/logo_pa.png" alt="Logo" class="w-full h-full object-contain" />
+              </div>
+              <div>
+                <span class="block text-white font-serif font-semibold text-sm">Piscines &amp; Aménagement</span>
+                <span class="block text-xs font-light tracking-widest text-white/50">Bordeaux Médoc</span>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">Spécialiste pose piscine coque polyester en Gironde depuis 2009.</p>
           </div>
           <div>
-            <span class="block text-white font-serif font-semibold text-sm">Piscines &amp; Aménagement</span>
-            <span class="block text-xs font-light tracking-widest text-white/50">Bordeaux Médoc</span>
+            <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Navigation</h4>
+            <ul class="space-y-3">
+              <li><a href="index.html" class="footer-link">Accueil</a></li>
+              <li><a href="piscines.html" class="footer-link">Les Piscines Coque</a></li>
+              <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+              <li><a href="index.html#devis-form" class="footer-link">Estimation gratuite</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Nos Modèles</h4>
+            <ul class="space-y-3">
+              <li><a href="#aix" class="footer-link">Aix</a></li>
+              <li><a href="#batz" class="footer-link">Batz</a></li>
+              <li><a href="#belleile" class="footer-link">Belle-Île</a></li>
+              <li><a href="#brehat" class="footer-link">Bréhat</a></li>
+              <li><a href="#noirmoutier" class="footer-link">Noirmoutier</a></li>
+              <li><a href="#oleron" class="footer-link">Oléron</a></li>
+              <li><a href="#re" class="footer-link">Ré</a></li>
+              <li><a href="#yeu" class="footer-link">Yeu</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Contact</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                <span class="text-gray-400 text-sm">19 rue des Aubépines<br />33180 Vertheuil</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                <a href="tel:+33641732853" class="footer-link">06 41 73 28 53</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                <a href="https://wa.me/33641732853" target="_blank" rel="noopener" class="footer-link hover:text-green-400">06 41 73 28 53 (WhatsApp)</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <a href="mailto:piscinesabm@gmail.com" class="footer-link">piscinesabm@gmail.com</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed">Spécialiste pose piscine coque polyester en Gironde depuis 2009.</p>
+        <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
+          <p class="text-gray-500 text-xs">© <span class="current-year"></span> Piscines &amp; Aménagement Bordeaux Médoc. Tous droits réservés.</p>
+          <div class="flex gap-6">
+            <a href="mentions-legales.html" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">Mentions légales</a>
+            <a href="politique-confidentialite.html" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">Politique de confidentialité</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Navigation</h4>
-        <ul class="space-y-3">
-          <li><a href="index.html"            class="footer-link">Accueil</a></li>
-          <li><a href="piscines.html"          class="footer-link">Les Piscines Coque</a></li>
-          <li><a href="index.html#contact"     class="footer-link">Contact</a></li>
-          <li><a href="index.html#devis-form"       class="footer-link">Estimation gratuite</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Nos Modèles</h4>
-        <ul class="space-y-3">
-          <li><a href="#aix"        class="footer-link">Aix</a></li>
-          <li><a href="#batz"       class="footer-link">Batz</a></li>
-          <li><a href="#belleile"   class="footer-link">Belle-Île</a></li>
-          <li><a href="#brehat"     class="footer-link">Bréhat</a></li>
-          <li><a href="#noirmoutier" class="footer-link">Noirmoutier</a></li>
-          <li><a href="#oleron"     class="footer-link">Oléron</a></li>
-          <li><a href="#re"         class="footer-link">Ré</a></li>
-          <li><a href="#yeu"        class="footer-link">Yeu</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold text-sm uppercase tracking-wide mb-5">Contact</h4>
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3">
-            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-            <span class="text-gray-400 text-sm">19 rue des Aubépines<br/>33180 Vertheuil</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-4 h-4 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-            <a href="tel:+33641732853" class="footer-link">06 41 73 28 53</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-4 h-4 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            <a href="https://wa.me/33641732853" target="_blank" rel="noopener" class="footer-link hover:text-green-400">06 41 73 28 53 (WhatsApp)</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-4 h-4 flex-shrink-0 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-            <a href="mailto:piscinesabm@gmail.com" class="footer-link">piscinesabm@gmail.com</a>
-          </li>
-        </ul>
+    </footer>
+
+    <!-- MODAL détails -->
+    <div id="pool-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4" style="background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(6px); opacity: 0; transition: opacity 0.3s ease">
+      <div class="modal-box bg-white rounded-3xl max-w-5xl w-full shadow-2xl p-4 sm:p-6 relative" style="transform: scale(0.9); transition: transform 0.3s ease; max-height: 96vh; overflow-y: auto">
+        <button id="modal-close" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors" aria-label="Fermer">
+          <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <div id="modal-content"></div>
       </div>
     </div>
-    <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center">
-      <p class="text-gray-500 text-xs">© <span class="current-year"></span> Piscines &amp; Aménagement Bordeaux Médoc. Tous droits réservés.</p>
-      <div class="flex gap-6">
-        <a href="mentions-legales.html" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">Mentions légales</a>
-        <a href="politique-confidentialite.html" class="text-gray-500 text-xs hover:text-gray-300 transition-colors">Politique de confidentialité</a>
-      </div>
-    </div>
-  </div>
-</footer>
 
+    <div class="toast" role="alert" aria-live="polite"></div>
 
-<!-- MODAL détails -->
-<div id="pool-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4"
-     style="background:rgba(0,0,0,0.65);backdrop-filter:blur(6px);opacity:0;transition:opacity 0.3s ease;">
-  <div class="modal-box bg-white rounded-3xl max-w-5xl w-full shadow-2xl p-4 sm:p-6 relative"
-       style="transform:scale(0.9);transition:transform 0.3s ease;max-height:96vh;overflow-y:auto;">
-    <button id="modal-close" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors" aria-label="Fermer">
-      <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-    <div id="modal-content"></div>
-  </div>
-</div>
+    <!-- Bulle WhatsApp -->
+    <a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20piscines%20coques." target="_blank" rel="noopener" class="wa-bubble" title="WhatsApp" aria-label="Contacter sur WhatsApp">
+      <span class="wa-pulse"></span>
+      <svg class="w-7 h-7 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+    </a>
 
-<div class="toast" role="alert" aria-live="polite"></div>
-
-<!-- Bulle WhatsApp -->
-<a href="https://wa.me/33641732853?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20piscines%20coques." target="_blank" rel="noopener" class="wa-bubble" title="WhatsApp" aria-label="Contacter sur WhatsApp">
-  <span class="wa-pulse"></span>
-  <svg class="w-7 h-7 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-
-<script src="js/main.js"></script>
-<script>
-  const modalEl = document.getElementById('pool-modal');
-  if (modalEl) {
-    const obs = new MutationObserver(() => {
-      if (!modalEl.classList.contains('hidden')) {
-        requestAnimationFrame(() => {
-          modalEl.style.opacity = '1';
-          const box = modalEl.querySelector('.modal-box');
-          if (box) box.style.transform = 'scale(1)';
+    <script src="js/main.js"></script>
+    <script>
+      const modalEl = document.getElementById("pool-modal");
+      if (modalEl) {
+        const obs = new MutationObserver(() => {
+          if (!modalEl.classList.contains("hidden")) {
+            requestAnimationFrame(() => {
+              modalEl.style.opacity = "1";
+              const box = modalEl.querySelector(".modal-box");
+              if (box) box.style.transform = "scale(1)";
+            });
+          } else {
+            modalEl.style.opacity = "0";
+            const box = modalEl.querySelector(".modal-box");
+            if (box) box.style.transform = "scale(0.9)";
+          }
         });
-      } else {
-        modalEl.style.opacity = '0';
-        const box = modalEl.querySelector('.modal-box');
-        if (box) box.style.transform = 'scale(0.9)';
+        obs.observe(modalEl, { attributes: true, attributeFilter: ["class"] });
       }
-    });
-    obs.observe(modalEl, { attributes: true, attributeFilter: ['class'] });
-  }
-</script>
-</body>
+    </script>
+  </body>
 </html>
