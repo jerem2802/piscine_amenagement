@@ -67,6 +67,15 @@ body {
 #navbar.scrolled .navbar-brand-name { color: var(--text-dark) !important; }
 #navbar.scrolled .navbar-brand-sub  { color: var(--blue) !important; }
 
+/* Logo glow on dark/transparent navbar */
+.logo-navbar {
+  filter: drop-shadow(0 0 12px rgba(255,255,255,1)) drop-shadow(0 0 28px rgba(255,255,255,0.65)) drop-shadow(0 0 50px rgba(255,255,255,0.28));
+  transition: filter 0.4s ease;
+}
+#navbar.scrolled .logo-navbar {
+  filter: none;
+}
+
 .nav-link {
   position: relative;
   transition: color 0.3s ease;
