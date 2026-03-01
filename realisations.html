@@ -317,11 +317,11 @@
 
     photos.forEach((photo, idx) => {
       const card = document.createElement('div');
-      card.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer reveal';
+      card.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer';
       card.style.aspectRatio = '4/3';
       card.innerHTML = `
         <img src="${cdnUrl(photo.public_id, 800)}" alt="Réalisation Piscines &amp; Aménagement"
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
