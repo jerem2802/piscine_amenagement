@@ -278,15 +278,21 @@
 
 <script src="js/main.js"></script>
 <script>
-  // ── Galerie ──────────────────────────────────────────────────────
-  const BASE = 'img/realisations/';
+  // ── Cloudinary ────────────────────────────────────────────────────
+  const CLOUD  = 'dkujetmxm';
+  const FOLDER = 'nos-r%C3%A9alisations';
+  const cdnUrl = (publicId, w) =>
+    `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${w}/${publicId}`;
+
   let photos = [];
   let currentIndex = 0;
 
-  fetch(BASE + 'photos.json')
+  fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${FOLDER}.json`)
     .then(r => r.json())
     .then(data => {
-      photos = data;
+      photos = (data.resources || []).sort((a, b) =>
+        (b.created_at || '').localeCompare(a.created_at || '')
+      );
       renderGallery();
     })
     .catch(() => {
@@ -294,26 +300,18 @@
     });
 
   function renderGallery() {
-    const grid = document.getElementById('gallery-grid');
+    const grid  = document.getElementById('gallery-grid');
     const empty = document.getElementById('gallery-empty');
 
-    if (!photos.length) {
-      empty.classList.remove('hidden');
-      return;
-    }
+    if (!photos.length) { empty.classList.remove('hidden'); return; }
 
     photos.forEach((photo, idx) => {
       const card = document.createElement('div');
       card.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer reveal';
       card.style.aspectRatio = '4/3';
       card.innerHTML = `
-        <img src="${BASE}${photo.file}" alt="${photo.caption || ''}"
+        <img src="${cdnUrl(photo.public_id, 800)}" alt="Réalisation Piscines &amp; Aménagement"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-        <div class="absolute inset-0 flex items-end p-4"
-             style="background:linear-gradient(to top, rgba(13,36,68,0.7) 0%, transparent 60%); opacity:0; transition:opacity 0.3s ease;"
-             data-overlay>
-          <span class="text-white text-sm font-medium">${photo.caption || ''}</span>
-        </div>
         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -322,15 +320,7 @@
           </div>
         </div>
       `;
-
-      card.addEventListener('mouseenter', () => {
-        card.querySelector('[data-overlay]').style.opacity = '1';
-      });
-      card.addEventListener('mouseleave', () => {
-        card.querySelector('[data-overlay]').style.opacity = '0';
-      });
       card.addEventListener('click', () => openLightbox(idx));
-
       grid.appendChild(card);
     });
   }
@@ -366,9 +356,9 @@
 
   function showPhoto() {
     const photo = photos[currentIndex];
-    lbImg.src = BASE + photo.file;
-    lbImg.alt = photo.caption || '';
-    lbCaption.textContent = photo.caption || '';
+    lbImg.src = cdnUrl(photo.public_id, 1600);
+    lbImg.alt = 'Réalisation Piscines & Aménagement';
+    lbCaption.textContent = '';
     lbCounter.textContent = photos.length > 1 ? `${currentIndex + 1} / ${photos.length}` : '';
     lbPrev.style.visibility = photos.length > 1 ? 'visible' : 'hidden';
     lbNext.style.visibility = photos.length > 1 ? 'visible' : 'hidden';
