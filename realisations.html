@@ -280,23 +280,34 @@
 <script>
   const CLOUD  = 'dkujetmxm';
   const TAG    = 'realisations';
-  const cdnUrl = (publicId, w) =>
-    `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${w}/${publicId}`;
+  const cdnUrl = (id, w) => `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${w}/${id}`;
 
   let photos = [];
   let currentIndex = 0;
 
-  fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json?_=${Date.now()}`)
-    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-    .then(data => {
-      photos = (data.resources || []).sort((a, b) =>
-        (b.created_at || '').localeCompare(a.created_at || '')
-      );
-      renderGallery();
-    })
-    .catch(() => {
-      document.getElementById('gallery-empty').classList.remove('hidden');
-    });
+  Promise.allSettled([
+    fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json?_=${Date.now()}`).then(r => r.json()),
+    fetch('img/realisations/photos.json').then(r => r.json())
+  ]).then(([cloudRes, localRes]) => {
+    const cloudPhotos = cloudRes.status === 'fulfilled'
+      ? (cloudRes.value.resources || [])
+          .sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''))
+          .map(p => ({ src: cdnUrl(p.public_id, 800), srcFull: cdnUrl(p.public_id, 1600), caption: '' }))
+      : [];
+
+    const localPhotos = localRes.status === 'fulfilled'
+      ? localRes.value.map(p => ({
+          src: `img/realisations/${p.file}`,
+          srcFull: `img/realisations/${p.file}`,
+          caption: p.caption || ''
+        }))
+      : [];
+
+    photos = [...cloudPhotos, ...localPhotos];
+    renderGallery();
+  }).catch(() => {
+    document.getElementById('gallery-empty').classList.remove('hidden');
+  });
 
   function renderGallery() {
     const grid  = document.getElementById('gallery-grid');
@@ -308,7 +319,7 @@
       card.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer';
       card.style.aspectRatio = '4/3';
       card.innerHTML = `
-        <img src="${cdnUrl(photo.public_id, 800)}" alt="Réalisation Piscines &amp; Aménagement"
+        <img src="${photo.src}" alt="${photo.caption || 'Réalisation Piscines &amp; Aménagement'}"
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -354,9 +365,9 @@
 
   function showPhoto() {
     const photo = photos[currentIndex];
-    lbImg.src = cdnUrl(photo.public_id, 1600);
-    lbImg.alt = 'Réalisation Piscines & Aménagement';
-    lbCaption.textContent = '';
+    lbImg.src = photo.srcFull;
+    lbImg.alt = photo.caption || 'Réalisation Piscines & Aménagement';
+    lbCaption.textContent = photo.caption || '';
     lbCounter.textContent = photos.length > 1 ? `${currentIndex + 1} / ${photos.length}` : '';
     lbPrev.style.visibility = photos.length > 1 ? 'visible' : 'hidden';
     lbNext.style.visibility = photos.length > 1 ? 'visible' : 'hidden';

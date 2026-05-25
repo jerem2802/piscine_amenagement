@@ -218,7 +218,7 @@
           <!-- Image / illustration -->
           <div class="reveal-left relative">
             <div class="relative rounded-3xl overflow-hidden aspect-square max-w-lg">
-              <img src="img/photos/manu.jpg" alt="Emmanuel — Piscines & Aménagement Bordeaux Médoc" class="w-full h-full object-cover" />
+              <img src="img/photos/manu (2).jpg" alt="Emmanuel — Piscines & Aménagement Bordeaux Médoc" class="w-full h-full object-cover" />
             </div>
             <!-- Grille de points déco -->
             <div class="absolute -bottom-6 -right-6 w-32 h-32 opacity-15" style="background-image: radial-gradient(circle, #1e4f8c 1.5px, transparent 0); background-size: 12px 12px"></div>
@@ -552,36 +552,18 @@
                     <input type="text" name="code_postal" class="form-input" placeholder="33000" />
                   </div>
                   <div>
-                    <label class="form-label">Objet</label>
-                    <select name="objet" class="form-input">
-                      <option value="">-- Objet --</option>
-                      <option>Demande d'estimation piscine coque</option>
-                      <option>Renseignements sur un modèle</option>
-                      <option>Aménagement de terrain</option>
+                    <label class="form-label">Type de prestation</label>
+                    <select name="prestation" class="form-input">
+                      <option value="">-- Votre projet --</option>
+                      <option>Nouvelle piscine coque polyester</option>
+                      <option>Pose de liner</option>
                       <option>Membrane armée (rénovation)</option>
-                      <option>SAV &amp; Suivi après pose</option>
-                      <option>Autre demande</option>
+                      <option>Rénovation complète</option>
+                      <option>Local technique</option>
+                      <option>Dépannage &amp; SAV</option>
+                      <option>Je ne sais pas encore</option>
                     </select>
                   </div>
-                </div>
-                <div>
-                  <label class="form-label">Modèle qui vous intéresse</label>
-                  <select name="modele" class="form-input">
-                    <option value="">-- Sélectionner --</option>
-                    <option value="Aix">Aix — 9.00 × 3.80 m</option>
-                    <option value="Batz">Batz — 8.45 × 4.40 m</option>
-                    <option value="Belle-Île">Belle-Île — 8.40 × 4.40 m</option>
-                    <option value="Bréhat">Bréhat — 9.30 × 4.40 m</option>
-                    <option value="Hoédic">Hoédic — 5.40 × 3.40 m</option>
-                    <option value="Molène">Molène — 4.80 × 2.50 m</option>
-                    <option value="Noirmoutier">Noirmoutier — 7.40 × 3.90 m</option>
-                    <option value="Oléron">Oléron — 7.40 × 3.90 m</option>
-                    <option value="Ouessant">Ouessant — 8.20 × 3.90 m</option>
-                    <option value="Quiberon">Quiberon — 7.90 × 4.20 m</option>
-                    <option value="Ré">Ré — 9.90 × 4.20 m</option>
-                    <option value="Yeu">Yeu — 6.30 × 3.30 m</option>
-                    <option value="Je ne sais pas encore">Je ne sais pas encore</option>
-                  </select>
                 </div>
                 <div>
                   <label class="form-label">Votre message <span class="text-gray-400 font-normal">(optionnel)</span></label>
@@ -869,34 +851,41 @@
 
     <script src="js/main.js"></script>
     <script>
-      // Aperçu réalisations homepage — Cloudinary
       const CLOUD  = 'dkujetmxm';
       const TAG    = 'realisations';
       const cdnUrl = (id, w) => `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${w}/${id}`;
 
-      fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json?_=${Date.now()}`)
-        .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-        .then(data => {
-          const grid  = document.getElementById('home-gallery');
-          const empty = document.getElementById('home-gallery-empty');
-          const photos = (data.resources || [])
-            .sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''))
-            .slice(0, 6);
-          if (!photos.length) { empty.classList.remove('hidden'); return; }
-          photos.forEach(p => {
-            const div = document.createElement('div');
-            div.className = 'group relative overflow-hidden rounded-2xl shadow-md';
-            div.style.aspectRatio = '4/3';
-            div.innerHTML = `
-              <img src="${cdnUrl(p.public_id, 800)}" alt="Réalisation Piscines &amp; Aménagement"
-                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            `;
-            grid.appendChild(div);
-          });
-        })
-        .catch(() => {
-          document.getElementById('home-gallery-empty').classList.remove('hidden');
+      Promise.allSettled([
+        fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json?_=${Date.now()}`).then(r => r.json()),
+        fetch('img/realisations/photos.json').then(r => r.json())
+      ]).then(([cloudRes, localRes]) => {
+        const grid  = document.getElementById('home-gallery');
+        const empty = document.getElementById('home-gallery-empty');
+
+        const cloudPhotos = cloudRes.status === 'fulfilled'
+          ? (cloudRes.value.resources || [])
+              .sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''))
+              .map(p => ({ src: cdnUrl(p.public_id, 800) }))
+          : [];
+
+        const localPhotos = localRes.status === 'fulfilled'
+          ? localRes.value.map(p => ({ src: `img/realisations/${p.file}` }))
+          : [];
+
+        const photos = [...cloudPhotos, ...localPhotos].slice(0, 6);
+        if (!photos.length) { empty.classList.remove('hidden'); return; }
+
+        photos.forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'group relative overflow-hidden rounded-2xl shadow-md';
+          div.style.aspectRatio = '4/3';
+          div.innerHTML = `
+            <img src="${p.src}" alt="Réalisation Piscines &amp; Aménagement"
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          `;
+          grid.appendChild(div);
         });
+      });
     </script>
     <script>
       const modalRappel = document.getElementById('modal-rappel');
