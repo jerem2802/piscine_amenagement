@@ -537,7 +537,7 @@ body {
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .step-connector { display: none; }
-  .hero-section { min-height: 100svh; }
+  .hero-section { min-height: 80svh; }
   .wa-bubble { bottom: 1.25rem; right: 1.25rem; width: 52px; height: 52px; }
 }
 

@@ -335,10 +335,12 @@ if (modal && modalClose) {
 const heroSubtitle = document.getElementById('hero-subtitle');
 if (heroSubtitle) {
   const texts = [
-    'Experts en pose de piscines coque polyester',
-    'Aménagements de jardins premium',
-    'Votre espace détente sur mesure',
-    'Devis gratuit sous 48h'
+    'Pose de piscines coque polyester',
+    'Pose de liner & membrane armée',
+    'Rénovation complète de bassins',
+    'Local technique & dépannage',
+    'SAV & suivi après pose',
+    'Projet complet clé en main'
   ];
   let currentIndex = 0;
   let charIndex = 0;

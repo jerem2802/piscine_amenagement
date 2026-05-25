@@ -278,41 +278,29 @@
 
 <script src="js/main.js"></script>
 <script>
-  // ── Cloudinary ────────────────────────────────────────────────────
-  const CLOUD = 'dkujetmxm';
-  const TAG   = 'realisations';   // tag à appliquer sur chaque photo dans Cloudinary
+  const CLOUD  = 'dkujetmxm';
+  const TAG    = 'realisations';
   const cdnUrl = (publicId, w) =>
     `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${w}/${publicId}`;
 
   let photos = [];
   let currentIndex = 0;
 
-  const listUrl = `https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json?_=${Date.now()}`;
-  console.log('[Cloudinary] Fetch →', listUrl);
-
-  fetch(listUrl)
-    .then(r => {
-      console.log('[Cloudinary] HTTP status:', r.status);
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return r.json();
-    })
+  fetch(`https://res.cloudinary.com/${CLOUD}/image/list/${TAG}.json?_=${Date.now()}`)
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then(data => {
-      console.log('[Cloudinary] Réponse:', data);
       photos = (data.resources || []).sort((a, b) =>
         (b.created_at || '').localeCompare(a.created_at || '')
       );
-      console.log('[Cloudinary] Photos trouvées:', photos.length);
       renderGallery();
     })
-    .catch(err => {
-      console.error('[Cloudinary] Erreur:', err);
+    .catch(() => {
       document.getElementById('gallery-empty').classList.remove('hidden');
     });
 
   function renderGallery() {
     const grid  = document.getElementById('gallery-grid');
     const empty = document.getElementById('gallery-empty');
-
     if (!photos.length) { empty.classList.remove('hidden'); return; }
 
     photos.forEach((photo, idx) => {
@@ -374,32 +362,21 @@
     lbNext.style.visibility = photos.length > 1 ? 'visible' : 'hidden';
   }
 
-  function prevPhoto() {
-    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-    showPhoto();
-  }
-
-  function nextPhoto() {
-    currentIndex = (currentIndex + 1) % photos.length;
-    showPhoto();
-  }
+  function prevPhoto() { currentIndex = (currentIndex - 1 + photos.length) % photos.length; showPhoto(); }
+  function nextPhoto() { currentIndex = (currentIndex + 1) % photos.length; showPhoto(); }
 
   lbClose.addEventListener('click', closeLightbox);
   lbPrev.addEventListener('click', prevPhoto);
   lbNext.addEventListener('click', nextPhoto);
-
-  lb.addEventListener('click', e => {
-    if (e.target === lb) closeLightbox();
-  });
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
 
   document.addEventListener('keydown', e => {
     if (lb.classList.contains('hidden')) return;
-    if (e.key === 'Escape')      closeLightbox();
-    if (e.key === 'ArrowLeft')   prevPhoto();
-    if (e.key === 'ArrowRight')  nextPhoto();
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  prevPhoto();
+    if (e.key === 'ArrowRight') nextPhoto();
   });
 
-  // Swipe tactile
   let touchStartX = 0;
   lb.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
   lb.addEventListener('touchend', e => {
